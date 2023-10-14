@@ -65,9 +65,11 @@ export default {
         .post("/register", userData)
         .then((response) => {
           // Handle success
+          console.log("Registration successful", response.data);
         })
         .catch((error) => {
           // Handle error
+          console.error("Registration failed", error.response.data);
         });
       // Handle success and error responses as needed
     },
