@@ -1,0 +1,23 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "my backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrinceFowang/content_manager_project.git"
+  },
+  "author": "Prince FOWANG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrinceFowang/content_manager_project/issues"
+  },
+  "homepage": "https://github.com/PrinceFowang/content_manager_project#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.1"
+  }
+}
