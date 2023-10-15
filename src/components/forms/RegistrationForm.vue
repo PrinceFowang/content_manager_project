@@ -62,7 +62,7 @@ export default {
 
       // Use a library like axios or the Fetch API to send the request
       axios
-        .post("/register", userData)
+        .post("http://localhost:8080/users/register", userData)
         .then((response) => {
           // Handle success
           console.log("Registration successful", response.data);

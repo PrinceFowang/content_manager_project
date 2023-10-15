@@ -22,14 +22,25 @@ function validateUserRegistration(username, email, password) {
 }
 
 function isValidEmail(email) {
-  // Implement email format validation
-  // You can use regular expressions or other methods
-  // Return true if the email is valid, false otherwise
+  // Regular expression for a basic email format
+  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+  // Check if the email matches the regular expression
+  return emailRegex.test(email);
 }
 
 function isStrongPassword(password) {
-  // Implement password strength validation
-  // Return true if the password is strong, false otherwise
+  // Password must be at least 8 characters long
+  if (password.length < 8) {
+    return false;
+  }
+
+  // Password must contain at least one letter, one number, and one special character
+  const hasLetter = /[a-zA-Z]/.test(password);
+  const hasNumber = /[0-9]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password);
+
+  return hasLetter && hasNumber && hasSpecialChar;
 }
 
 module.exports = {
