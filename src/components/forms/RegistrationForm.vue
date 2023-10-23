@@ -53,25 +53,19 @@ export default {
   },
   methods: {
     registerUser() {
-      // Send a POST request to your server with the registration data
       const userData = {
         username: this.username,
         email: this.email,
         password: this.password,
       };
-
-      // Use a library like axios or the Fetch API to send the request
       axios
-        .post("http://localhost:8080/users/register", userData)
+        .post("/register", userData)
         .then((response) => {
-          // Handle success
-          console.log("Registration successful", response.data);
+          console.log("Registration successful", response?.data);
         })
         .catch((error) => {
-          // Handle error
-          console.error("Registration failed", error.response.data);
+          console.error("Registration failed", error?.response?.data);
         });
-      // Handle success and error responses as needed
     },
   },
 };

@@ -6,7 +6,7 @@ const { validateUserRegistration } = require("./userValidation");
 const { isDuplicateUser, saveUserToDatabase } = require("./databaseOperations");
 const { hashPassword } = require("./passwordUtils");
 
-router.get("/", async (req, res) => {
+router.get("http://localhost:8080/register", async (req, res) => {
   try {
     const query = "SELECT * FROM users";
     const results = await db.query(query);
